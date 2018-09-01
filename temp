@@ -1,0 +1,13 @@
+<!-- <% messages.forEach(function (msg) { %>
+                <% if (msg.username === username) { %>
+                    <div class="message host">
+                        <div class="name"><%= msg.username %></div>
+                        <div class="content"><%= msg.content%></div>
+                    </div>
+                <% } else { %>
+                    <div class="message guest">
+                        <div class="name"><%= msg.username %></div>
+                        <div class="content"><%= msg.content%></div>
+                    </div>
+                <% } %>
+            <% }); %> -->

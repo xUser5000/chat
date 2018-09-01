@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Chat</title>
+</head>
+<body>
+
+    <div id="chat">
+
+        <!-- Chat Messages -->
+        <div class="top">
+
+            <% messages.forEach(function (msg) { %>
+                <% if (msg.username === username) { %>
+                    <div class="message host">
+                        <div class="name"><%= msg.username %></div>
+                        <div class="content"><%= msg.content%></div>
+                    </div>
+                <% } else { %>
+                    <div class="message guest">
+                        <div class="name"><%= msg.username %></div>
+                        <div class="content"><%= msg.content%></div>
+                    </div>
+                <% } %>
+                <div class="clear"></div>
+            <% }); %>
+
+            
+        </div>
+
+        <!-- new message input -->
+        <div class="bottom">
+            <input type="text" id="text" class="message" placeholder="Type your message (<%= username %>)">
+        </div>
+
+    </div>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script src="../assets/main.js"></script>
+</body>
+</html>
